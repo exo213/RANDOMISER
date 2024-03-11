@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 40px;
+}
+
+.meal-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for the food result */
+#foodResult {
+    color: #DC3545;  /* Example: A shade of red */
+    font-size: 24px; /* Increased font size */
+    margin-top: 20px; /* Adds space above the result */
+}
