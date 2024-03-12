@@ -1,36 +1,47 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font */
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     text-align: center;
-    margin: 40px auto; /* Center content with automatic side margins */
-    max-width: 600px; /* Responsive design: set a maximum width */
+    margin: 40px auto;
+    max-width: 600px; 
+    background-color: #B4F8C8 
 }
 
 .meal-buttons {
     margin-bottom: 30px; 
 }
 
-
 .meal-buttons button {
-    background-color: #e74c3c; /* A bolder color */ 
-    color: white;
+    background-color: #f3f308 ; 
+    color: rgb(22, 19, 19);
     border: none;
     border-radius: 8px;
     padding: 15px 30px;
     margin: 0 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
+    transition: all 0.3s ease; 
 }
 
 .meal-buttons button:hover {
-    background-color: #c0392b; /* Darker shade on hover */
+    background-color: #f3f308 ;   
+    transform: translateY(-3px); 
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.4);
 }
 
 #foodResult {
     font-size: 30px;
     font-weight: bold; 
-    color: #27ae60; /* A vibrant green */
-    border: 3px dashed #2ecc71; /* Dashed border for interest */
+    color: #ae2727; 
+    border: 3px dashed #ae2727; 
     padding: 20px;
     margin-top: 40px;
     border-radius: 10px; 
+    animation: foodReveal 0.5s ease-in-out 3s forwards; 
+}
+
+@keyframes foodReveal {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { transform: scale(1.1); } /* Midpoint with zoom-in */
+    100% { opacity: 1; transform: scale(1); } 
 }
