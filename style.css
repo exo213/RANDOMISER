@@ -19,4 +19,6 @@ body {
     color: #DC3545;  /* Example: A shade of red */
     font-size: 24px; /* Increased font size */
     margin-top: 20px; /* Adds space above the result */
+    text-align: center;
 }
+
