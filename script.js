@@ -2,16 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Define your food lists 
     const foodLists = {
         breakfast: [
-            "Idle Sambhar", "Break Omelette", "Dal", "Sprouts", "Parantha", 
-            "Daliya", "Aloo Puri", "Poha", "Pakode", "Sandwich" 
+            "Idli Sambhar", "Bread Omelette", "Dal", "Sprouts", "Parantha", 
+            "Daliya", "Aloo Puri", "Poha", "Pakode", "Sandwich" , "Kachodi" , "Samose" 
         ], 
         lunch: [
-            "Paneer", "Chole", "Rajma", "Dal", "Bhindi", 
-            "Arbi", "Kaddu", "Tinde", "Kofte", "Curry" 
+            "Paneer Bhurji", "Chole", "Rajma", "Dal", "Bhindi", 
+            "Arbi", "Kaddu", "Tinde", "Kofte", "Curry" , "Rolls"
         ],
         dinner: [
             "Pasta", "Dal Makhani", "Paneer Butter Masala", "Egg Curry", "Palak Paneer", 
-            "Kebab", "Matar Paneer", "Mangaudi", "Khicdi", "Chinese"
+            "Kebab", "Matar Paneer",  "Khichdi", "Chinese", "Biryani", "Soya chaap" , 
         ] 
     };
 
