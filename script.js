@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const foodLists = {
         breakfast: [
             "Idli Sambhar", "Bread Omelette", "Dal", "Sprouts", "Parantha", 
-            "Daliya", "Aloo Puri", "Poha", "Pakode", "Sandwich" , "Kachodi" , "Samose" 
+            "Daliya", "Aloo Puri", "Poha", "Pakode", "Sandwich" , "Kachodi" , "Samose" , "pav bhaji"
         ], 
         lunch: [
             "Paneer Bhurji", "Chole", "Rajma", "Dal", "Bhindi", 
