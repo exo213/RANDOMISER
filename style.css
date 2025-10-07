@@ -1,11 +1,3 @@
-/*
- * Enhanced CSS with a Coral/Teal Theme and improved aesthetics
- * New Color Palette:
- * Background: #F7F7F7 (Very Light Gray)
- * Text: #333333 (Dark Gray)
- * Accent/Buttons: #FF6B6B (Coral)
- * Result Text/Border: #1ABC9C (Emerald Teal)
- */
 
 body {
     /* New background color for a clean slate */
@@ -122,4 +114,5 @@ h1 {
     70% { transform: scale(1.05) rotate(2deg); } /* Overshoot for a bounce */
     100% { opacity: 1; transform: scale(1) rotate(0); }
 }
+
 
