@@ -1,47 +1,125 @@
+/*
+ * Enhanced CSS with a Coral/Teal Theme and improved aesthetics
+ * New Color Palette:
+ * Background: #F7F7F7 (Very Light Gray)
+ * Text: #333333 (Dark Gray)
+ * Accent/Buttons: #FF6B6B (Coral)
+ * Result Text/Border: #1ABC9C (Emerald Teal)
+ */
+
 body {
-    color: #000000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    /* New background color for a clean slate */
+    background-color: #F7F7F7;
+    color: #333333; /* Darker text for better readability */
+    /* Updated, modern sans-serif font */
+    font-family: 'Inter', sans-serif;
     text-align: center;
-    margin: 40px auto;
-    max-width: 600px; 
-    background-color: #B4F8C8 
+    margin: 0;
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 700px; /* Slightly wider max-width for balance */
+    width: 100%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    /* Optional: subtle background shadow to lift the content off the page */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.5em;
+    color: #FF6B6B;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
 }
 
 .meal-buttons {
-    margin-bottom: 30px; 
+    margin-bottom: 40px; /* Increased spacing */
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensure responsiveness on small screens */
 }
 
 .meal-buttons button {
-    background-color: #f3f308 ; 
-    color: rgb(22, 19, 19);
+    /* New inviting coral color for buttons */
+    background-color: #FF6B6B;
+    color: white; /* White text on coral for contrast */
     border: none;
-    border-radius: 8px;
-    padding: 15px 30px;
-    margin: 0 15px;
+    border-radius: 12px; /* Modern, slightly rounded corners */
+    padding: 18px 35px; /* Increased padding */
+    flex-grow: 1; /* Allow buttons to grow on smaller screens */
+    max-width: 45%; /* Limit width on larger screens */
+    font-size: 1.1em; /* Slightly larger font */
+    font-weight: 700;
     cursor: pointer;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
-    transition: all 0.3s ease; 
+    /* More sophisticated, softer shadow */
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.4);
+    transition: all 0.2s ease;
+    letter-spacing: 0.5px;
 }
 
 .meal-buttons button:hover {
-    background-color: #f3f308 ;   
-    transform: translateY(-3px); 
-    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.4);
+    background-color: #e65c5c; /* Slightly darker coral on hover */
+    /* Lift and enlarge the shadow for a clear press effect */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(255, 107, 107, 0.6);
+}
+
+/* Responsive adjustment for buttons */
+@media (max-width: 600px) {
+    .meal-buttons button {
+        max-width: 100%;
+        margin: 5px 0;
+    }
+    .meal-buttons {
+        flex-direction: column;
+    }
 }
 
 #foodResult {
-    font-size: 30px;
-    font-weight: bold; 
-    color: #ae2727; 
-    border: 3px dashed #ae2727; 
-    padding: 20px;
-    margin-top: 40px;
-    border-radius: 10px; 
-    animation: foodReveal 0.5s ease-in-out 3s forwards; 
+    font-size: 36px;
+    /* A bold, fun font for the result reveal */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: #1ABC9C; /* Striking Emerald Teal for the reveal */
+    /* Clean, solid border */
+    border: 4px solid #1ABC9C;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 15px;
+    /* Initial state set to hidden before animation */
+    opacity: 0;
+    transform: scale(0.5) rotate(-5deg); /* Match 0% keyframe */
+    min-height: 50px; /* Ensure space before result appears */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 3px rgba(26, 188, 156, 0.2);
 }
 
-@keyframes foodReveal {
-    0% { opacity: 0; transform: scale(0.8); }
-    50% { transform: scale(1.1); } /* Midpoint with zoom-in */
-    100% { opacity: 1; transform: scale(1); } 
+/* The animation property is added/removed via JS to trigger the effect */
+.revealed {
+    animation: foodReveal 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
+
+/* Updated Keyframe Animation: Bounce-in effect */
+@keyframes foodReveal {
+    0% { opacity: 0; transform: scale(0.5) rotate(-5deg); }
+    70% { transform: scale(1.05) rotate(2deg); } /* Overshoot for a bounce */
+    100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
